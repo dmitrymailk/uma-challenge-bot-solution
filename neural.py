@@ -15,6 +15,7 @@ def prepare(filepath):
 
 
 def main():
+    global model
     prediction = model.predict([prepare('img/image.jpg')])
     result = man_classes[list(prediction[0]).index(max(prediction[0]))]
     return result
