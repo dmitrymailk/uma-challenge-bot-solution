@@ -9,7 +9,7 @@ import pickle
 import time
 import numpy as np
 
-NAME = "Cats-vs-dogs-CNN"
+NAME = "footbal-CNN"
 
 X = np.asarray(pickle.load(open("X.pickle", "rb")))
 y = np.asarray(pickle.load(open("y.pickle", "rb")))
