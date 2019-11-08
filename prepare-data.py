@@ -6,8 +6,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 men_classes = pd.read_csv(".\\images_labelling.csv")
+# print(len(set(men_classes["label"])), set(men_classes["label"]))
 
-DATADIR = ""
+DATADIR = "C:\\Users\\dmitry\\Documents\\Data Science\\Competitions\\1__uma-challenge\\1__machine-learning\\images"
 
 IMG_HEIGHT = 65
 IMG_WIDTH = 100
@@ -19,8 +20,8 @@ def create_training_data():
   for img in tqdm(os.listdir(DATADIR)):  
     try:
         class_num = int(men_classes["label"][men_classes["boxid"] == int(img[:img.find(".")])])
-        img_array = cv2.imread(os.path.join(path,img), cv2.IMREAD_GRAYSCALE)  
-        new_array = cv2.resize(img_array, (IMG_HEIGHT, IMG_WIDTH))  
+        img_array = cv2.imread(os.path.join(path,img), cv2.IMREAD_GRAYSCALE)  # convert to array
+        new_array = cv2.resize(img_array, (IMG_HEIGHT, IMG_WIDTH))  # resize to normalize data size
         training_data.append([new_array, class_num]) 
     except Exception as e:  
         pass

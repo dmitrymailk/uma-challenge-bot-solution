@@ -4,12 +4,13 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
+# more info on callbakcs: https://keras.io/callbacks/ model saver is cool too.
 from tensorflow.keras.callbacks import TensorBoard
 import pickle
 import time
 import numpy as np
 
-NAME = "footbals-CNN"
+NAME = "Cats-vs-dogs-CNN"
 
 X = np.asarray(pickle.load(open("X.pickle", "rb")))
 y = np.asarray(pickle.load(open("y.pickle", "rb")))

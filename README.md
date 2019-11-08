@@ -1,1 +1,0 @@
-# uma-challenge-bot-solution
