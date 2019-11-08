@@ -6,9 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 men_classes = pd.read_csv(".\\images_labelling.csv")
-# print(len(set(men_classes["label"])), set(men_classes["label"]))
-
-DATADIR = "C:\\Users\\dmitry\\Documents\\Data Science\\Competitions\\1__uma-challenge\\1__machine-learning\\images"
+DATADIR = ""
 
 IMG_HEIGHT = 65
 IMG_WIDTH = 100

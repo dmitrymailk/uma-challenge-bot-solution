@@ -3,6 +3,7 @@ import tensorflow as tf
 import pandas as pd
 import pickle
 man_classes = pickle.load(open("man-list.pickle", "rb"))
+model = tf.keras.models.load_model("64x3-CNN.model")
 
 def prepare(filepath):
     img_height = 65
@@ -14,14 +15,8 @@ def prepare(filepath):
 
 
 def main():
-    print("Hello, I have started")
-    model = tf.keras.models.load_model("64x3-CNN.model")
-    print("step 1")
     prediction = model.predict([prepare('img/image.jpg')])
-    print("step 2")
     result = man_classes[list(prediction[0]).index(max(prediction[0]))]
-    print("step 3")
-    print(result)
     return result
 
 
