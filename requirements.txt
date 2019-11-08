@@ -1,0 +1,7 @@
+numpy<1.17
+pandas
+python-telegram-bot
+tensorflow
+pickle-mixin
+opencv-python-headless
+
